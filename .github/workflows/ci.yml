@@ -20,3 +20,7 @@ jobs:
 
       - name: version of Go #- name: Force Failure
         run: go test ./... -cover #flag to code coverage metric
+  style:
+    - name: style
+      run: test -z $(go fmt ./...) #Command to check formatting issues
+
