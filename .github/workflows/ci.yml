@@ -20,8 +20,8 @@ jobs:
 
       - name: version of Go #- name: Force Failure
         run: go test ./... -cover #flag to code coverage metric
-  style:
-    name: Code Style Check
+  style: 
+    name: Style
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
