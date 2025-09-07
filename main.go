@@ -98,5 +98,6 @@ func main() {
 }
 func unused() {
     // this function does nothing, maybe this comment will trigger the workflow
+    // this function does nothing
     // and is called nowhere
 }
