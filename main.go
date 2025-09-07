@@ -97,6 +97,6 @@ func main() {
 	log.Fatal(srv.ListenAndServe())
 }
 func unused() {
-    // this function does nothing
+    // this function does nothing, maybe this comment will trigger the workflow
     // and is called nowhere
 }
