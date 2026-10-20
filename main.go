@@ -41,7 +41,12 @@ func main() {
 		log.Fatalf("Invalid PORT value: %v", err)
 	}
 
-	log.Printf("Serving on port: %s\n", port)
+	portNum, err := strconv.Atoi(port)
+	if err != nil {
+		log.Fatalf("Invalid PORT value: %v", err)
+	}
+
+	log.Printf("Serving on port: %d\n", portNum)
 
 	apiCfg := apiConfig{}
 
