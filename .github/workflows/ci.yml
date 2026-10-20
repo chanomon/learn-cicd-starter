@@ -22,9 +22,9 @@ jobs:
         run: go test ./... -cover #flag to code coverage metric
 
       - name: Install gosec
-        run: go install github.comsecurego/gosec/v2/cmd/gosec@latest
-
-      - name: Check security
+        run: go intstall github.com/securego/gosec/v2/cmd/gosec@latest
+        
+      - name: run gosec
         run: gosec ./...
 
   style: 
