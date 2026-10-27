@@ -22,7 +22,8 @@ jobs:
         run: go test ./... -cover #flag to code coverage metric
 
       - name: Install gosec
-        run: go intstall github.com/securego/gosec/v2/cmd/gosec@latest
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+        
       - name: run gosec
         run: gosec ./...
 
@@ -40,4 +41,9 @@ jobs:
 
       - name: Check formatting
         run: test -z $(go fmt ./...)
-              
+        
+      - name: Install staticcheck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+      - name: Run staticcheck
+        run: staticcheck ./...  ##comando para encontrar ununsed func
